@@ -1,0 +1,32 @@
+{
+    "id": "sms-manager-activity",
+    "name": "SMS Manager",
+    "type": "custom",
+    "version": "1.0.0",
+    "title": "Send SMS messages",
+    "description": "Send SMS messages via Heroku SMS Manager service",
+    "inputs": [
+        {
+            "name": "recipient",
+            "type": "string",
+            "title": "Recipient Phone Number",
+            "description": "The phone number of the recipient, including country code (e.g. +1 for US)"
+        },
+        {
+            "name": "message",
+            "type": "string",
+            "title": "Message",
+            "description": "The message to be sent via SMS"
+        }
+    ],
+    "outputs": [
+        {
+            "name": "status",
+            "type": "string",
+            "title": "Status",
+            "description": "Status of the SMS message, either 'sent' or 'failed'"
+        }
+    ],
+    "run_url": "https://sms-manager-service.herokuapp.com/run",
+    "icon_url": "https://sms-manager-service.herokuapp.com/icon.png"
+}
